@@ -1,0 +1,9 @@
+projects:
+  - name: core
+    dir: ./core
+  - name: platform
+    dir: ./platform
+    depends_on: ["core"]
+  - name: services
+    dir: ./services
+    depends_on: ["core", "platform"]
