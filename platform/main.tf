@@ -1,3 +1,20 @@
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "5.24.0"
+    }
+  }
+    backend "s3" {
+    bucket = "digger-s3backend-demo-project-dependencies"              # Change if a different S3 bucket name was used for the backend 
+    key    = "terraform/state/digger-demo-platform"
+    region = "us-east-1"
+  }
+}
+
+provider "aws" {
+  region = "us-east-1"  # Replace with your desired AWS region
+}
 
 variable "subnet_id" {}
 
