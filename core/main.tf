@@ -5,6 +5,11 @@ terraform {
       version = "5.24.0"
     }
   }
+    backend "s3" {
+    bucket = "digger-s3backend-demo-project-dependencies"              # Change if a different S3 bucket name was used for the backend 
+    key    = "terraform/state/digger-demo-core"
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
