@@ -5,14 +5,6 @@ terraform {
       version = "5.24.0"
     }
   }
-    backend "s3" {
-    bucket = "digger-s3backend-demo-aws-multiacc-dev"              # Change if a different S3 bucket name was used for the backend 
-    /* Un-comment to use DynamoDB state locking
-    dynamodb_table = "digger-locktable-demo-aws-multiacc-dev"      # Change if a different DynamoDB table name was used for backend
-    */
-    key    = "terraform/state"
-    region = "us-east-1"
-  }
 }
 
 provider "aws" {
@@ -22,7 +14,7 @@ provider "aws" {
 resource "aws_vpc" "vpc_network" {
   cidr_block = "11.0.0.0/16"
   tags = {
-    Name = "terraform-network"
+    Name = "digger-demo-project-dependencies-network"
   }
 }
 
