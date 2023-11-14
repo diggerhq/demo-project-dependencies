@@ -4,6 +4,8 @@ projects:
   - name: platform
     dir: ./platform
     depends_on: ["core"]
+    include_patterns: ["./core/**"]
   - name: services
     dir: ./services
     depends_on: ["core", "platform"]
+    include_patterns: ["core/**", "platform/**"]
