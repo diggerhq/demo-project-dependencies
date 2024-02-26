@@ -29,3 +29,4 @@ resource "aws_instance" "services_instance" {
     Name = "services-instance"
   }
 }
+
