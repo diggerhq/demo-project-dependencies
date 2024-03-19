@@ -11,7 +11,7 @@ projects:
     # include_patterns: ["core/**", "platform/**"]
 
 workflows:
-  default:
+  default2:
     plan:
       steps:
         - init
