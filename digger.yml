@@ -9,3 +9,11 @@ projects:
     dir: ./services
     depends_on: ["platform"]
     # include_patterns: ["core/**", "platform/**"]
+
+workflows:
+  default:
+    plan:
+      steps:
+        - init
+        - plan
+        - run: echo "running the custom command!"
