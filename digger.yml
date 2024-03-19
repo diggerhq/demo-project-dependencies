@@ -10,10 +10,3 @@ projects:
     depends_on: ["platform"]
     # include_patterns: ["core/**", "platform/**"]
 
-workflows:
-  default2:
-    plan:
-      steps:
-        - init
-        - plan
-        - run: echo "running the custom command!"
