@@ -30,3 +30,4 @@ resource "aws_instance" "platform_instance" {
   }
 }
 
+
