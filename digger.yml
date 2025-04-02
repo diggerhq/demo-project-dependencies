@@ -3,7 +3,6 @@ projects:
     dir: ./core
   - name: platform
     dir: ./platform
-    depends_on: ["core"]
     # include_patterns: ["./core/**"]
   - name: services
     dir: ./services
