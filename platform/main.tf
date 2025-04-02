@@ -29,3 +29,4 @@ resource "aws_instance" "platform_instance" {
     Name = "platform-instance"
   }
 }
+
